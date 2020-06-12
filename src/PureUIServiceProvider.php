@@ -22,7 +22,7 @@ class PureUIServiceProvider extends ServiceProvider
 
         Admin::booting(function () use ($vendor_path) {
             array_push(Admin::$baseCss, $vendor_path . 'PureAdminLTE/dist/css/pure.ui.min.css');
-            array_push(Admin::$baseJs, $vendor_path . 'PureAdminLTE/dist/css/pure.ui.min.js');
+            array_push(Admin::$baseJs, $vendor_path . 'PureAdminLTE/dist/js/pure.ui.min.js');
         });
     }
 }

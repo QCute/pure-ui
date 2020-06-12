@@ -1,5 +1,5 @@
 {
-    "name": "QCute/pure-ui",
+    "name": "qcute/pure-ui",
     "description": "pure ui for laravel-admin",
     "type": "library",
     "keywords": ["laravel-admin", "extension"],
