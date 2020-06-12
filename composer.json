@@ -1,0 +1,34 @@
+{
+    "name": "QCute/pure-ui",
+    "description": "pure ui for laravel-admin",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension"],
+    "homepage": "https://github.com/QCute/pure-ui",
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "QCute",
+            "email": "baldoor@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": ">=1.7.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "QCute\\PureUI\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "QCute\\PureUI\\PureUIServiceProvider"
+            ]
+
+        }
+    }
+}
