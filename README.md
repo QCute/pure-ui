@@ -1,15 +1,16 @@
-# Pure-UI
+# Use PureUI in laravel-admin
 
 Pure-UI is a Pure Design extension for [laravel-admin](https://github.com/z-song/laravel-admin).
 
 ## Requirements
 
-* laravel-admin >= 1.7.5
+* laravel-admin >= 1.7.0
 
 ## Installation
 
-```bash
+```
 composer require qcute/pure-ui
+
 php artisan vendor:publish --tag=laravel-admin-pure-ui
 ```
 
@@ -17,6 +18,7 @@ php artisan vendor:publish --tag=laravel-admin-pure-ui
 
 ```bash
 composer update qcute/pure-ui
+
 php artisan vendor:publish --tag=laravel-admin-pure-ui --force
 ```
 
@@ -24,7 +26,7 @@ php artisan vendor:publish --tag=laravel-admin-pure-ui --force
 
 Add `extensions` option in your `config/admin.php` configuration file:
 
-```php
+```
 'extensions' => [
     // If the value is set to false, this extension will be disabled
     'pure-ui' => [ 'enable' => true ]
@@ -38,5 +40,4 @@ Just **Refresh** your browser.
 
 ## License
 
-Licensed under [The GPL License (GPL)](LICENSE).
-
+Licensed under [The GPL V3.0 License (GPL)](LICENSE).
