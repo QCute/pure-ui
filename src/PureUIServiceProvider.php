@@ -15,14 +15,13 @@ class PureUIServiceProvider extends ServiceProvider
         if (!PureUI::boot())
             return;
 
-        $vendor_path = 'vendor/laravel-admin-ext/pure-ui/';
+        if ($this->app->runningInConsole() && $assets = $extension->assets()) {
+            $this->publishes([$assets => public_path('vendor/laravel-admin-ext/pure-ui/')], 'laravel-admin-pure-ui');
+        }
 
-        if ($this->app->runningInConsole() && $assets = $extension->assets())
-            $this->publishes([$assets => public_path($vendor_path)], 'laravel-admin-pure-ui');
-
-        Admin::booting(function () use ($vendor_path) {
-            array_push(Admin::$baseCss, $vendor_path . 'PureAdminLTE/dist/css/pure.ui.min.css');
-            array_push(Admin::$baseJs, $vendor_path . 'PureAdminLTE/dist/js/pure.ui.min.js');
+        Admin::booting(function () {
+            Admin::js('vendor/laravel-admin-ext/pure-ui/PureAdminLTE/dist/js/pure.ui.min.js');
+            Admin::css('vendor/laravel-admin-ext/pure-ui/PureAdminLTE/dist/css/pure.ui.min.css');
         });
     }
 }
